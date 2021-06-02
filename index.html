@@ -32,7 +32,7 @@
       <h1>VIETNAM’S PREMIER LIFESTYLE DESTINATION</h1>
       <p class="hero-subtitle">Hoiana combines stylish accommodation, world-class golf and exhilarating entertainment in Vietnam’s first and finest integrated resort.</p>
       <a class="button button-outline" href="https://www.hoiana.com/">Upgrade Internet Bandwidth</a>
-      <a class="button button-outline" href="https://localauth.hoiana.com/logout">Lougout</a>
+      <a class="button button-outline" onclick="myFunction()">Lougout</a>
       <a class="button button-outline" href="https://www.hoiana.com/">Go HOIANA</a>
     </div>
   </section>
@@ -72,14 +72,11 @@
   <script src="js/jquery.ajaxchimp.min.js"></script>
   <script src="js/main.js"></script>
   <script>
-    $(document).ready(function(){
-      $("button").click(function(){
-        $.get("https://localauth.hoiana.com/logout", function(data, status){
-          document.location.href = 'http://wifi.hoiana.com/#' + int(Math.random()*100);
-        });
-        
+    function myFunction() {
+      $.get("https://localauth.hoiana.com/logout", function(data, status){
+        document.location.href = 'http://wifi.hoiana.com/#' + int(Math.random()*100);
       });
-    });
+    };
   </script>
 </body>
 </html>
