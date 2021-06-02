@@ -71,5 +71,15 @@
   <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.ajaxchimp.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $.get("https://localauth.hoiana.com/logout", function(data, status){
+          document.location.href = 'http://wifi.hoiana.com/#' + int(Math.random()*100);
+        });
+        
+      });
+    });
+  </script>
 </body>
 </html>
