@@ -67,16 +67,9 @@
   <script src="js/jquery.ajaxchimp.min.js"></script>
   <script src="js/main.js"></script>
   <script>
-    function myFunction() {
-      
-    };
 	$(document).ready(function(){
 	  $("#btnLogout").click(function(){
 		$.get("https://localauth.hoiana.com/logout", function(data, status){
-			$(".hero-subtitle").hide();
-			$(".button").hide();
-			$(".text-uppercase").hide();
-			$("h1").html("Please wait ... !");;
 			setTimeout(() => {  document.location.reload(true); }, 3000);
 		});
 	  });
