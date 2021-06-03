@@ -70,7 +70,10 @@
 	$(document).ready(function(){
 	  $("#btnLogout").click(function(){
 		$.get("https://localauth.hoiana.com/logout", function(data, status){
-			setTimeout(() => {  document.location.reload(true); }, 3000);
+			$(".hero-subtitle").hide();
+			$(".button").hide();
+			$(".text-uppercase").hide();
+			$("h1").html("Please wait refresh the page to continue !");
 		});
 	  });
 	});
