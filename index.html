@@ -31,7 +31,6 @@
       <p class="text-uppercase">HOIANA Intergrated Resort</p>
       <h1>VIETNAM’S PREMIER LIFESTYLE DESTINATION</h1>
       <p class="hero-subtitle">Hoiana combines stylish accommodation, world-class golf and exhilarating entertainment in Vietnam’s first and finest integrated resort.</p>
-      <a class="button button-outline" href="https://www.hoiana.com/">Upgrade Internet Bandwidth</a>
       <a class="button button-outline" href="#" id="btnLogout">Lougout</a>
       <a class="button button-outline" href="https://www.hoiana.com/">Go HOIANA</a>
     </div>
@@ -64,10 +63,6 @@
 	</footer>
   <!-- ================ End footer Area ================= -->
 
-
-
-
-  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.ajaxchimp.min.js"></script>
   <script src="js/main.js"></script>
@@ -78,7 +73,7 @@
 	$(document).ready(function(){
 	  $("#btnLogout").click(function(){
 		$.get("https://localauth.hoiana.com/logout", function(data, status){
-        document.location.href = 'http://wifi.hoiana.com/#' + int(Math.random()*100);
+        		document.location.reload(true);
 		});
 	  });
 	});
