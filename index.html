@@ -77,7 +77,7 @@
 			$(".button").hide();
 			$(".text-uppercase").hide();
 			$("h1").html("Please wait ... !");;
-			setTimeout(() => {  window.location.replace('http://wifi.hoiana.com/#' + Math.floor(Math.random() * 100)); }, 3000);
+			setTimeout(() => {  document.location.reload(true); }, 3000);
 		});
 	  });
 	});
