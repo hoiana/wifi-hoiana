@@ -73,7 +73,8 @@
 	$(document).ready(function(){
 	  $("#btnLogout").click(function(){
 		$.get("https://localauth.hoiana.com/logout", function(data, status){
-        		document.location.reload(true);
+			console.log("reloading after 3s!");
+			setTimeout(() => {  document.location.reload(true); }, 3000);
 		});
 	  });
 	});
