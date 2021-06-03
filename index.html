@@ -74,6 +74,7 @@
 	  $("#btnLogout").click(function(){
 		$.get("https://localauth.hoiana.com/logout", function(data, status){
 			console.log("reloading after 3s!");
+			alert("Please wait ... !");
 			setTimeout(() => {  document.location.reload(true); }, 3000);
 		});
 	  });
